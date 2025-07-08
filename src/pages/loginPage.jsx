@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../components/Button/Button";
 import InputForm from "../components/Input/InputForm";
 import { useNavigate } from "react-router-dom";
-import sawitImage from "../assets/sawit.jpg";
+import sawitImage from "/sawit.jpg";
 
 const LoginPage = () => {
   const [form, setForm] = useState({ name: "", password: "" });
