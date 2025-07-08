@@ -37,7 +37,7 @@ const Penyelesaian = () => {
     },
   ];
   return (
-    <div className="p-6 bg-white rounded-xl shadow-md">
+    <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-md">
       <h2 className="text-2xl font-bold text-center mb-8">anjaylah</h2>
 
       <StatSection title="Tender Terbatas" stats={tenderStats} />
