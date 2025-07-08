@@ -10,27 +10,29 @@ const RupaPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 items-stretch">
         {/* Kartu INVESTASI */}
         <div className="bg-blue-100 rounded-xl shadow-md px-6 py-4 text-center text-black flex flex-col justify-between h-full">
-        <h3 className="font-bold text-xl mb-4 mt-4 tracking-tight">INVESTASI</h3>
+          <h3 className="font-bold text-xl mb-4 mt-4 tracking-tight">
+            INVESTASI
+          </h3>
 
-        <hr className="border-t border-black mb-4" />
+          <hr className="border-t border-black mb-4" />
 
-        <div className="flex justify-center items-center gap-4 mb-4">
+          <div className="flex justify-center items-center gap-4 mb-4">
             <div className="leading-tight">
-            <p className="text-base font-bold">0</p>
-            <p className="text-xs">PAKET</p>
+              <p className="text-base font-bold">0</p>
+              <p className="text-xs">PAKET</p>
             </div>
             <div className="h-6 w-px bg-black" />
             <div className="leading-tight">
-            <p className="text-base font-bold">0.000 %</p>
+              <p className="text-base font-bold">0.000 %</p>
             </div>
-        </div>
+          </div>
 
-        <hr className="border-t border-black mb-4" />
+          <hr className="border-t border-black mb-4" />
 
-        <div className="leading-tight">
+          <div className="leading-tight">
             <p className="text-xs font-semibold mb-1">NOMINAL</p>
             <p className="text-xl font-extrabold">Rp0.0000</p>
-        </div>
+          </div>
         </div>
 
         {/* Chart Tengah */}
