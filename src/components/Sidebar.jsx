@@ -39,8 +39,13 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
-        <li className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded cursor-pointer">
-          <Clock size={20} /> SLA
+        <li>
+          <Link
+            to="/sla"
+            className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded"
+          >
+            <Clock size={20} /> SLA
+          </Link>
         </li>
 
         {/* Upload with dropdown toggle */}
