@@ -40,11 +40,17 @@ const SmallChart = ({ title, legend1, legend2, color1, color2 }) => {
       <HighchartsReact highcharts={Highcharts} options={options} />
       <div className="flex justify-start gap-4 text-sm mt-2">
         <span className="flex items-center gap-1">
-          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: color1 }} />
+          <span
+            className="w-3 h-3 rounded-full"
+            style={{ backgroundColor: color1 }}
+          />
           {legend1}
         </span>
         <span className="flex items-center gap-1">
-          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: color2 }} />
+          <span
+            className="w-3 h-3 rounded-full"
+            style={{ backgroundColor: color2 }}
+          />
           {legend2}
         </span>
       </div>

@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Home, Image, Clock, Upload, ChevronDown, ChevronUp } from 'lucide-react';
+import {
+  Home,
+  Image,
+  Clock,
+  Upload,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
 const Sidebar = () => {
   const [isUploadOpen, setIsUploadOpen] = useState(false);
@@ -14,18 +21,24 @@ const Sidebar = () => {
 
       {/* Menu List */}
       <ul className="space-y-2 text-base">
-<ul className="space-y-2">
-  <li>
-    <Link to="/dashboard" className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded">
-      <Home size={20} /> Dashboard
-    </Link>
-  </li>
-  <li>
-    <Link to="/rupa" className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded">
-      <Image size={20} /> Rupa
-    </Link>
-  </li>
-</ul>
+        <ul className="space-y-2">
+          <li>
+            <Link
+              to="/dashboard"
+              className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded"
+            >
+              <Home size={20} /> Dashboard
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/rupa"
+              className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded"
+            >
+              <Image size={20} /> Rupa
+            </Link>
+          </li>
+        </ul>
         <li className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded cursor-pointer">
           <Clock size={20} /> SLA
         </li>

@@ -1,35 +1,35 @@
-import React from 'react';
-import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
+import React from "react";
+import Highcharts from "highcharts";
+import HighchartsReact from "highcharts-react-official";
 
 const PieChartHighcharts = () => {
   const options = {
     chart: {
-      type: 'pie',
+      type: "pie",
       height: 250,
-      backgroundColor: 'transparent',
+      backgroundColor: "transparent",
     },
     title: {
-      text: null
+      text: null,
     },
     series: [
       {
-        name: 'Jumlah',
+        name: "Jumlah",
         data: [
-          { name: 'Investasi', y: 984, color: '#7C3AED' },
-          { name: 'Eksploitasi', y: 413, color: '#ff9d00' },
-        ]
-      }
+          { name: "Investasi", y: 984, color: "#7C3AED" },
+          { name: "Eksploitasi", y: 413, color: "#ff9d00" },
+        ],
+      },
     ],
     plotOptions: {
       pie: {
         allowPointSelect: true,
-        cursor: 'pointer',
+        cursor: "pointer",
         dataLabels: {
           enabled: true,
-          format: '{point.y}',
-        }
-      }
+          format: "{point.y}",
+        },
+      },
     },
     credits: { enabled: false },
   };
