@@ -35,7 +35,7 @@ const SmallChart = ({ title, legend1, legend2, color1, color2 }) => {
   };
 
   return (
-    <div className="bg-[#F2F5EC] rounded-xl shadow p-4 text-black">
+    <div className="bg-[#F2F5EC] rounded-xl shadow p-4 text-black outline-1 transition duration-600 ease-in-out hover:scale-102 h-fit">
       <h3 className="text-sm font-bold mb-2">{title}</h3>
       <HighchartsReact highcharts={Highcharts} options={options} />
       <div className="flex justify-start gap-4 text-sm mt-2">
@@ -54,7 +54,7 @@ const SmallChart = ({ title, legend1, legend2, color1, color2 }) => {
           {legend2}
         </span>
       </div>
-      <button className="mt-3 px-4 py-1 border border-black rounded text-sm font-medium hover:bg-gray-100">
+      <button className="mt-3 px-4 py-1 border border-black rounded text-sm font-medium hover:bg-green-200 transition duration-600 ease-in-out hover:scale-105">
         Lihat Detail
       </button>
     </div>
