@@ -37,8 +37,10 @@ const Penyelesaian = () => {
     },
   ];
   return (
-    <div className="p-6 bg-white border border-slate-200 rounded-xl">
-      <h2 className="text-2xl font-bold text-center mb-8">anjaylah</h2>
+    <div className="p-8">
+      <h2 className="text-2xl font-bold text-center mb-8 uppercase">
+        PERINCIAN PAKET PER BIDANG/WILAYAH/VENDOR
+      </h2>
 
       <StatSection title="Tender Terbatas" stats={tenderStats} />
       <StatSection title="Penunjukkan Langsung" stats={langsungStats} />
