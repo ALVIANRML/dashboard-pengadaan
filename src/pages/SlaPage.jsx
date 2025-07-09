@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SelectForm from "../components/Input/SelectForm";
 import Penyelesaian from "../components/Fragments/Penyelesaian";
+import Table from "../components/Table";
 
 const SlaPage = () => {
   const [filters, setFilters] = useState({
@@ -97,6 +98,10 @@ const SlaPage = () => {
         <Penyelesaian.StatSection title="Tender Terbatas" stats={tenderStats} />
         <Penyelesaian.StatSection title="Langsung" stats={langsungStats} />
       </Penyelesaian>
+
+      <div className="flex justify-center items-center mt-4 w-full">
+        <Table />
+      </div>
     </div>
   );
 };
