@@ -9,7 +9,7 @@ const Dashboard = () => {
     <div className="flex h-screen w-full">
       <Sidebar />
 
-      <div className="flex-1 ml-64">
+      <div className="flex-1 ">
         <Navbar />
         <main className="pt-36 px-6">
           <h1 className="text-3xl font-bold text-center text-black">

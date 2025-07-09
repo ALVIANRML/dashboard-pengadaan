@@ -10,6 +10,7 @@ import Sidebar from "./components/Sidebar";
 import RupaPage from "./pages/RupaPage";
 import Dashboard from "./pages/Dashboard";
 import LoginPage from "./pages/LoginPage";
+import SlaPage from "./pages/SlaPage";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/rupa" element={<RupaPage />} />
+          <Route path="/sla" element={<SlaPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </Layout>

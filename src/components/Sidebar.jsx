@@ -11,21 +11,18 @@ import {
 
 const Sidebar = () => {
   const [isHoveringUpload, setIsHoveringUpload] = useState(false);
-  const timeoutRef = useRef(null); // Untuk delay hover keluar
+  const timeoutRef = useRef(null); 
 
   const handleUploadClick = (type) => {
     alert(`Upload ${type} dipilih`);
   };
 
-  // Saat mouse masuk
   const handleMouseEnter = () => {
-    clearTimeout(timeoutRef.current); // Batalkan delay tutup jika ada
+    clearTimeout(timeoutRef.current);
     setIsHoveringUpload(true);
   };
 
-  // Saat mouse keluar
   const handleMouseLeave = () => {
-    // Delay tutup 300ms
     timeoutRef.current = setTimeout(() => {
       setIsHoveringUpload(false);
     }, 300);
@@ -33,7 +30,6 @@ const Sidebar = () => {
 
   return (
     <aside className="bg-[#4D5240] text-white w-64 min-w-[16rem] h-screen p-4 fixed top-0 left-0 z-50">
-      {/* Logo */}
       <div className="mb-8 text-center">
         <img src="/logo.png" alt="Company Logo" className="w-24 mx-auto" />
       </div>
@@ -62,7 +58,6 @@ const Sidebar = () => {
           <Clock size={20} /> SLA
         </li>
 
-        {/* Upload Dropdown with hover delay */}
         <div
           className="relative"
           onMouseEnter={handleMouseEnter}
