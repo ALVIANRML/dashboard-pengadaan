@@ -1,0 +1,45 @@
+export const bidangOptions = [
+  { value: "IT", label: "Teknologi Informasi" },
+  { value: "Konstruksi", label: "Konstruksi Bangunan" },
+  { value: "Alat Berat", label: "Pengadaan Alat Berat" },
+  { value: "Keamanan", label: "Keamanan & CCTV" },
+  { value: "Transportasi", label: "Transportasi & Kendaraan" },
+  { value: "ATK", label: "Alat Tulis Kantor (ATK)" },
+  { value: "Jasa Konsultan", label: "Jasa Konsultan" },
+  { value: "Peralatan Medis", label: "Peralatan Medis" },
+  { value: "Furniture", label: "Furniture & Interior" },
+  { value: "Perangkat Listrik", label: "Perangkat Listrik" },
+  { value: "Logistik", label: "Logistik & Pergudangan" },
+  { value: "Bahan Kimia", label: "Bahan Kimia & Laboratorium" },
+];
+
+export const vendorOptions = [
+  { value: "PT Sumber Makmur", label: "PT. Sumber Makmur" },
+  { value: "CV Teknologi Utama", label: "CV. Teknologi Utama" },
+  { value: "PT Karya Abadi", label: "PT. Karya Abadi" },
+  { value: "PT Cahaya Mandiri", label: "PT. Cahaya Mandiri" },
+  { value: "UD Anugrah Jaya", label: "UD. Anugrah Jaya" },
+  { value: "PT Sinergi Bersama", label: "PT. Sinergi Bersama" },
+  { value: "CV Garuda Teknik", label: "CV. Garuda Teknik" },
+  { value: "PT Multi Niaga", label: "PT. Multi Niaga" },
+  { value: "PT Mitra Sarana", label: "PT. Mitra Sarana" },
+  { value: "CV Kencana Putra", label: "CV. Kencana Putra" },
+  { value: "PT Utama Perkasa", label: "PT. Utama Perkasa" },
+  { value: "PT Indotek Solusi", label: "PT. Indotek Solusi" },
+  { value: "PT Alam Sejahtera", label: "PT. Alam Sejahtera" },
+  { value: "CV Sakti Mandiri", label: "CV. Sakti Mandiri" },
+  { value: "PT Tirta Utama", label: "PT. Tirta Utama" },
+];
+
+export const wilayahOptions = [
+  { value: "Sumatera Utara", label: "Sumatera Utara" },
+  { value: "Riau", label: "Riau" },
+  { value: "Sumatera Selatan", label: "Sumatera Selatan" },
+  { value: "Jambi", label: "Jambi" },
+  { value: "Kalimantan Timur", label: "Kalimantan Timur" },
+  { value: "Kalimantan Barat", label: "Kalimantan Barat" },
+  { value: "Kalimantan Utara", label: "Kalimantan Utara" },
+  { value: "Kalimantan Selatan", label: "Kalimantan Selatan" },
+  { value: "Kepulauan Riau", label: "Kepulauan Riau" },
+  { value: "Bangka Belitung", label: "Bangka Belitung" },
+];

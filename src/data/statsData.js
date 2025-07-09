@@ -1,4 +1,3 @@
-// Data untuk statistik tender
 export const tenderStats = [
   {
     title: "JUMLAH PAKET",
@@ -17,7 +16,6 @@ export const tenderStats = [
   },
 ];
 
-// Data untuk statistik penunjukkan langsung
 export const langsungStats = [
   {
     title: "JUMLAH PAKET",
@@ -36,7 +34,6 @@ export const langsungStats = [
   },
 ];
 
-// Data untuk statistik summary
 export const summaryStats = [
   {
     title: "TOTAL PAKET",

@@ -1,4 +1,4 @@
-const SelectInput = ({ name, value, onChange = [] }) => {
+const SelectInput = ({ name, value, onChange = () => {}, options = [] }) => {
   return (
     <div className="relative w-full">
       <select
@@ -7,9 +7,14 @@ const SelectInput = ({ name, value, onChange = [] }) => {
         onChange={onChange}
         name={name}
       >
-        <option value="">Semua Bidang</option>
-        <option value="keuangan">Keuangan</option>
-        <option value="umum">Umum</option>
+        <option value="">
+          Semua {name.charAt(0).toUpperCase() + name.slice(1)}
+        </option>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
       </select>
 
       <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
