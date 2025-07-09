@@ -1,49 +1,26 @@
+import React from "react";
 import StatSection from "./StatSection";
+import { tenderStats, langsungStats, summaryStats } from "../../data/statsData";
 
 const Penyelesaian = () => {
-  const tenderStats = [
-    {
-      title: "JUMLAH PAKET",
-      value: "0 PAKET",
-      bgColor: "bg-[#C1CFA1]",
-    },
-    {
-      title: "NILAI PAKET",
-      value: "Rp0.00",
-      bgColor: "bg-[#F5F0D7]",
-    },
-    {
-      title: "PRESENTASE",
-      value: "0.00 %",
-      bgColor: "bg-[#DDE6F4]",
-    },
-  ];
-
-  const langsungStats = [
-    {
-      title: "JUMLAH PAKET",
-      value: "0 PAKET",
-      bgColor: "bg-[#C1CFA1]",
-    },
-    {
-      title: "NILAI PAKET",
-      value: "Rp0.00",
-      bgColor: "bg-[#F5F0D7]",
-    },
-    {
-      title: "PRESENTASE",
-      value: "0.00 %",
-      bgColor: "bg-[#DDE6F4]",
-    },
-  ];
   return (
-    <div className="p-8">
-      <h2 className="text-2xl font-bold text-center mb-8 uppercase">
-        PERINCIAN PAKET PER BIDANG/WILAYAH/VENDOR
-      </h2>
+    <div className="flex flex-col gap-y-8 p-8">
+      {/* Section 1: Summary dengan 2 card */}
+      <div className="flex flex-col gap-y-4">
+        <h2 className="text-2xl font-bold text-center mb-4 uppercase">
+          PERINCIAN PAKET PER BIDANG/WILAYAH/VENDOR
+        </h2>
+        <StatSection stats={summaryStats} columns={2} showTitle={false} />
+      </div>
 
-      <StatSection title="Tender Terbatas" stats={tenderStats} />
-      <StatSection title="Penunjukkan Langsung" stats={langsungStats} />
+      {/* Section 2: Tender dan Penunjukkan Langsung */}
+      <div className="flex flex-col gap-y-4">
+        <h2 className="text-2xl font-bold text-center mb-4 uppercase">
+          DETAIL PENGADAAN PER METODE
+        </h2>
+        <StatSection title="Tender Terbatas" stats={tenderStats} />
+        <StatSection title="Penunjukkan Langsung" stats={langsungStats} />
+      </div>
     </div>
   );
 };
