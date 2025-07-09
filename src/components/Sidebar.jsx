@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   Home,
@@ -10,7 +10,26 @@ import {
 } from "lucide-react";
 
 const Sidebar = () => {
-  const [isUploadOpen, setIsUploadOpen] = useState(false);
+  const [isHoveringUpload, setIsHoveringUpload] = useState(false);
+  const timeoutRef = useRef(null); // Untuk delay hover keluar
+
+  const handleUploadClick = (type) => {
+    alert(`Upload ${type} dipilih`);
+  };
+
+  // Saat mouse masuk
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current); // Batalkan delay tutup jika ada
+    setIsHoveringUpload(true);
+  };
+
+  // Saat mouse keluar
+  const handleMouseLeave = () => {
+    // Delay tutup 300ms
+    timeoutRef.current = setTimeout(() => {
+      setIsHoveringUpload(false);
+    }, 300);
+  };
 
   return (
     <aside className="bg-[#4D5240] text-white w-64 min-w-[16rem] h-screen p-4 fixed top-0 left-0 z-50">
@@ -21,50 +40,62 @@ const Sidebar = () => {
 
       {/* Menu List */}
       <ul className="space-y-2 text-base">
-        <ul className="space-y-2">
-          <li>
-            <Link
-              to="/dashboard"
-              className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded"
-            >
-              <Home size={20} /> Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/rupa"
-              className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded"
-            >
-              <Image size={20} /> Rupa
-            </Link>
-          </li>
-        </ul>
+        <li>
+          <Link
+            to="/dashboard"
+            className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded"
+          >
+            <Home size={20} /> Dashboard
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            to="/rupa"
+            className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded"
+          >
+            <Image size={20} /> Rupa
+          </Link>
+        </li>
+
         <li className="flex items-center gap-2 hover:bg-[#F2F5EC] hover:text-black p-2 rounded cursor-pointer">
           <Clock size={20} /> SLA
         </li>
 
-        {/* Upload with dropdown toggle */}
-        <li
-          className="flex items-center justify-between hover:bg-[#F2F5EC] hover:text-black p-2 rounded cursor-pointer"
-          onClick={() => setIsUploadOpen(!isUploadOpen)}
+        {/* Upload Dropdown with hover delay */}
+        <div
+          className="relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <div className="flex items-center gap-2">
-            <Upload size={20} /> Upload
-          </div>
-          {isUploadOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-        </li>
+          <li className="flex items-center justify-between hover:bg-[#F2F5EC] hover:text-black p-2 rounded cursor-pointer">
+            <div className="flex items-center gap-2">
+              <Upload size={20} /> Upload
+            </div>
+            {isHoveringUpload ? (
+              <ChevronUp size={16} />
+            ) : (
+              <ChevronDown size={16} />
+            )}
+          </li>
 
-        {/* Dropdown content */}
-        {isUploadOpen && (
-          <ul className="ml-8 mt-1 space-y-1 text-sm rounded-md p-2">
-            <li className="p-2 rounded cursor-pointer hover:bg-[#F2F5EC] hover:text-black border border-gray-400">
-              Real
-            </li>
-            <li className="p-2 rounded cursor-pointer hover:bg-[#F2F5EC] hover:text-black border border-gray-400">
-              Rupa
-            </li>
-          </ul>
-        )}
+          {isHoveringUpload && (
+            <ul className="absolute left-0 top-full mt-1 bg-white text-black shadow-md rounded-md p-2 w-40 border border-gray-300 z-20 transition-opacity duration-300 ease-in-out">
+              <li
+                onClick={() => handleUploadClick("Real")}
+                className="p-2 rounded cursor-pointer hover:bg-[#F2F5EC] hover:text-black"
+              >
+                Upload Real
+              </li>
+              <li
+                onClick={() => handleUploadClick("Rupa")}
+                className="p-2 rounded cursor-pointer hover:bg-[#F2F5EC] hover:text-black"
+              >
+                Upload Rupa
+              </li>
+            </ul>
+          )}
+        </div>
       </ul>
     </aside>
   );

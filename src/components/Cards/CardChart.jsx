@@ -2,8 +2,10 @@ import React from "react";
 
 const CardChart = ({ title, bgColor = "bg-yellow-100", children }) => {
   return (
-    <div className={`rounded-xl shadow-md p-4 ${bgColor} w-full min-h-[580px]`}>
-      <h2 className="text-center font-bold mb-8 mt-8  text-black text-xl">
+    <div
+      className={`rounded-xl shadow-md p-4 ${bgColor} w-full h-fit outline-1 text-base transition duration-600 ease-in-out hover:scale-102`}
+    >
+      <h2 className="text-center font-bold mb-8 mt-8  text-black text-2xl">
         {title}
       </h2>
 
