@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
-:root {
-  --color-text-primary: #c1cfa1;
-  --colot-text-secondary: #9aa580;
-}
-
 @theme {
+  --color-primary: #9aa580;
+  --color-secondary: #f3f4f6;
+
   --font-heading: "Figtree", "sans-serif";
   --font-inter: "Inter", "sans-serif";
 }

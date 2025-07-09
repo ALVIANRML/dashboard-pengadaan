@@ -22,11 +22,11 @@ const Table = () => {
   );
 
   return (
-    <div className="w-full bg-white p-4 rounded-lg  ">
+    <div className="w-full bg-white rounded-lg  ">
       <div className="overflow-hidden rounded-lg border border-gray-300">
         <table className="min-w-full text-sm text-left">
           <thead>
-            <tr className="bg-[#9AA580] text-white">
+            <tr className="bg-primary text-white text-center">
               {[
                 "Nomor PP",
                 "Nama Paket",
@@ -68,10 +68,10 @@ const Table = () => {
                     {item.metode}
                   </span>
                 </td>
-                <td className="px-3 py-2 border-r border-gray-300 last:border-r-0">
+                <td className="px-3 py-2 border-r border-gray-300 last:border-r-0 font-semibold">
                   {item.nilai}
                 </td>
-                <td className="px-3 py-2 border-r border-gray-300 last:border-r-0">
+                <td className="px-3 py-2 border-r border-gray-300 last:border-r-0 font-semibold text-primary">
                   {item.vendor}
                 </td>
                 <td className="px-3 py-2 border-r border-gray-300 last:border-r-0">

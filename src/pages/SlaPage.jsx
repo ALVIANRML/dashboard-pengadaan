@@ -99,7 +99,7 @@ const SlaPage = () => {
         <Penyelesaian.StatSection title="Langsung" stats={langsungStats} />
       </Penyelesaian>
 
-      <div className="flex justify-center items-center mt-4 w-full">
+      <div className="flex justify-center items-center mt-8 w-full">
         <Table />
       </div>
     </div>
