@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 
-// Custom CSS untuk scrollbar yang cantik
 const scrollbarStyles = `
   .custom-scrollbar::-webkit-scrollbar {
     width: 8px;
@@ -33,7 +32,6 @@ const scrollbarStyles = `
   }
 `;
 
-// Inject CSS ke head
 if (typeof document !== "undefined") {
   const styleElement = document.createElement("style");
   styleElement.textContent = scrollbarStyles;
