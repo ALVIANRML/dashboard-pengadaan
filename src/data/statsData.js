@@ -36,13 +36,13 @@ export const langsungStats = [
 
 export const summaryStats = [
   {
-    title: "TOTAL PAKET",
-    value: "145 PAKET",
+    title: "RATA-RATA DURASI TENDER TERBATAS",
+    value: "145 HARI",
     bgColor: "bg-[#C1CFA1]",
   },
   {
-    title: "TOTAL NILAI",
-    value: "Rp2.5M",
+    title: "RATA-RATA DURASI PENUNJUKAN LANGSUNG",
+    value: "123 HARI",
     bgColor: "bg-[#F5F0D7]",
   },
 ];
